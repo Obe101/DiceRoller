@@ -39,7 +39,7 @@ namespace EncasulationDemoWithDice
                 Value = (byte)rand.Next(1, 7);
             
             }
-            return Value
+            return Value;
         }
     }
 }
