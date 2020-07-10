@@ -8,8 +8,10 @@ namespace EncasulationDemoWithDice
 {
     class Die
     {
+        Random rand;
         public Die()
         {
+            rand = new Random();
             Roll(); // Roll Die on creation to generate first random number
         }
         ///<summaryy> Face value of die
@@ -25,7 +27,6 @@ namespace EncasulationDemoWithDice
 
         public byte Roll() 
         {
-            Random rand = new Random();
             Value = (byte)rand.Next(1, 7);
             return Value
         }
