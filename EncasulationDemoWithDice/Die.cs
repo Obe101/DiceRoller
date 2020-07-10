@@ -8,10 +8,15 @@ namespace EncasulationDemoWithDice
 {
     class Die
     {
-        Random rand;
-        public Die()
+        //static fields are shared across all istances of a class
+        static Random rand;
+
+        static Die() //Static constructor are called once for all constructors 
         {
             rand = new Random();
+        }
+        public Die()
+        {
             Roll(); // Roll Die on creation to generate first random number
         }
         ///<summaryy> Face value of die

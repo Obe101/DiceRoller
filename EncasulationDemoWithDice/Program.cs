@@ -10,6 +10,7 @@ namespace EncasulationDemoWithDice
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
