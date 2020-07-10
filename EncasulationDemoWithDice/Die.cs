@@ -28,11 +28,17 @@ namespace EncasulationDemoWithDice
         ///<Summary>
         ///Roll a new random number value between 1-6
         ///and return the newly rolled value
+        ///If die is held, the current value will be returned
+        ///annd no new value generated
         /// </Summary>
 
         public byte Roll() 
         {
-            Value = (byte)rand.Next(1, 7);
+            if (!IsHeld) 
+            {
+                Value = (byte)rand.Next(1, 7);
+            
+            }
             return Value
         }
     }
